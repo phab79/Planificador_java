@@ -1,0 +1,10 @@
+proceso2.txt,4,1
+proceso1.txt,7,2
+proceso5.txt,3,3
+proceso0.txt,2,1
+proceso4.txt,6,3
+proceso0.txt,6,1
+proceso4.txt,6,1
+proceso3.txt,7,2
+proceso2.txt,2,1
+proceso3.txt,8,3
