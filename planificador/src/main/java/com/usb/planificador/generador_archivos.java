@@ -4,8 +4,13 @@
  */
 package com.usb.planificador;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.exceptions.CsvValidationException;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,6 +62,8 @@ public class generador_archivos {
         FileWriter escritor = new FileWriter(bash);
         BufferedWriter buffer = new BufferedWriter(escritor);
         Random aleatorio = new Random();
+        buffer.write("proceso,inicio,prioridad");
+        buffer.newLine();
         for(int i = 0; i<cantidad; i++){
             buffer.write(procesos[aleatorio.nextInt(cantidadProcesos)]);
             buffer.write(",");
@@ -79,7 +86,6 @@ public class generador_archivos {
             return carpeta.mkdir();
         }
     }
-    
     
     
     public boolean test(){
